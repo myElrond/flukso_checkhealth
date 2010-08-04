@@ -432,7 +432,7 @@ int main(int argc, const char *argv[])
 		// Fetch data
 		res = do_curl();
 
-		// Did it work?
+		// Did it work out?
 		if (res != 0)
 		{
 			cerr << "CURL call failed with error-code: " << res << endl;
