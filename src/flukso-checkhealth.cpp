@@ -149,7 +149,7 @@ int process_data()
 								currentTime - lastValidTime) - configData.maxAge << " seconds older than the required age of "
 								<< configData.maxAge << " seconds." << endl;
 					else
-						cout << "Value outdated" << endl;
+						cout << "Value outdated." << endl;
 
 					return 2;
 				}
@@ -323,7 +323,7 @@ void check_arguments(poptContext optCon)
 
 	char* charHelper;
 	string stringHelper;
-	int retcode;
+
 
 	// Check cmdline arguments for plausibility
 
@@ -378,6 +378,7 @@ int main(int argc, const char *argv[])
 	CURLcode res;
 	poptContext optCon;
 	int poptRC;
+	unsigned int retcode = 0;
 
 	// Define CmdLine Options Context
 	struct poptOption cmdLineOpts[] =
@@ -456,7 +457,7 @@ int main(int argc, const char *argv[])
 			if (configData.debug)
 			cout << "Parsing data was successful." << endl;
 
-			if (retcode = process_data() > 0)
+			if ( (retcode = process_data()) > 0)
 			{
 				break;
 			}
