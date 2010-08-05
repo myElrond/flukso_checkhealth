@@ -1,1 +1,8 @@
 This little utility is intended to act as a swiss army knife for accessing various data and functions build around the Flukso power metering device, which is used in the http://www.mysmartgrid.de projekt.
+
+It is currently in a very early stage and has only a few functions:
+
+1. Output the last valid value delivered to the database on the website
+2. Check the freshness of the delivery process.
+
+
